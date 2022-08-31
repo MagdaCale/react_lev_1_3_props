@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import ListItem from './components/ListItem';
+
+let list = [
+  {
+    icon: './img/check.png',
+    task: 'Hit the gym',
+    img: './img/gym.png',
+  },
+  {
+    icon: './img/doing.png',
+    task: 'Pay bills',
+    img: './img/bill.png'
+  },
+  {
+    icon: './img/doing.png',
+    task: 'Meet George',
+    img: './img/dance.png',
+  },
+  {
+    icon: './img/doing.png',
+    task: 'Buy eggs',
+    img: './img/eat.png',
+  },
+  {
+    icon: './img/no.png',
+    task: 'Read book',
+    img: './img/book.png',
+  },
+  {
+    icon: './img/no.png',
+    task: 'Organize office',
+    img: './img/organize.png'
+  },
+]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ListItem tasks={list}/>
+      
     </div>
   );
 }
